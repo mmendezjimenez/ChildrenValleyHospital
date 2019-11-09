@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  dates: string[] = ['February', 'April', 'March', 'May', 'June', 'July'];
+  dates: string[] = ['January','February', 'March','April', 'May', 'June', 'July', 'August', 'September','October','November','December'];
 
   constructor() {}
 
