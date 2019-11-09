@@ -61,3 +61,15 @@ form.addEventListener('submit', (e) => {
     })
 
 }
+
+var queryText = window.prompt("Who are you searching for?");
+
+db.collection('PatientLogIn').orderBy('Username').startAt(queryText).endAt(queryText + '\uf8ff').get().then(snapshot => {
+
+snapshot.docs.forEach(doc => {
+
+    renderPatientLogIn(doc);
+
+});
+
+});
