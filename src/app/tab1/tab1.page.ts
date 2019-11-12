@@ -8,6 +8,8 @@ import { Chart } from "chart.js";
 })
 export class Tab1Page {
   dates: string[] = ['January','February', 'March','April', 'May', 'June', 'July', 'August', 'September','October','November','December'];
+  exams: string[] = ['Pupilary Reflex', 'Eye Movement', 'Visual Acuity'];
+  icons = ["assets/65000.png", "assets/movement.png","assets/accurate.png"];
   @ViewChild("doughnutCanvas",{static: true}) doughnutCanvas: ElementRef;
 
 
