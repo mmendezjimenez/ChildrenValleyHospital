@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -9,24 +10,35 @@ export class Tab2Page {
 
   messages = [
     {
-      user: 'Doctor Professor Of Medicine',
+      user: 'Doctor',
       createdAt: 15554090856000,
-      msg: 'Hey whats up dog?'
+      msg: ' Hello, dear patient?'
     },
     {
-      user: 'max',
+      user: 'Patient',
       createdAt: 155540900956000,
-      msg: 'I dont feel no good?'
+      msg: ' I dont feel so good?'
     },
     {
-      user: 'Doctor Professor Of Medicine',
+      user: 'Doctor',
       createdAt: 15540910560000,
-      msg: 'Are you dead?'
+      msg: ' Make sure to complete exams?'
     }
   ]
+  currentUser = 'Patient'
+  newMsg = '';
+  @ViewChild(IonContent) content: IonContent;
   constructor() {}
   sendMessage(){
-    
+    this.messages.push({
+      user: 'Patient', 
+      createdAt: new Date().getTime(),
+      msg: this.newMsg
+    });
+    this.newMsg = '';
+    setTimeout(()=>{
+      this.content.scrollToBottom(200);
+    })
   }
 
 }

@@ -1,17 +1,19 @@
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithComponentFactories } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
+import { AutosizeModule } from 'ngx-autosize';
 
 @NgModule({
-  imports: [
+  imports: [ 
     IonicModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
+    ,AutosizeModule
   ],
   declarations: [Tab2Page]
-})
+}) 
 export class Tab2PageModule {}
