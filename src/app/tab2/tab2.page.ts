@@ -25,13 +25,13 @@ export class Tab2Page {
       msg: ' Make sure to complete exams?'
     }
   ]
-  currentUser = 'Patient'
+  currentUser = 'Doctor'
   newMsg = '';
-  @ViewChild(IonContent) content: IonContent;
+  //@ViewChild(IonContent) content: IonContent;
   constructor() {}
   sendMessage(){
     this.messages.push({
-      user: 'Patient', 
+      user: 'Doctor', 
       createdAt: new Date().getTime(),
       msg: this.newMsg
     });
