@@ -7,5 +7,15 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-grid>
+    <ion-row *ngFor="let message of messages">
+      <ion-col size-12>
+        <b>{{ message.user }}</b>
+        <span>{{ message.msg }}</span>
+        <div class="time" text-right>
+          {{ message.createdAt | date:'short'}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
