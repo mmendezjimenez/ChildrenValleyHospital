@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyABQ7QKlUS-jd9VMd7r8S7PjxPljicMfSw',
+    authDomain: 'valleychildrenhospital.firebaseapp.com',
+    databaseURL: 'https://valleychildrenhospital.firebaseio.com',
+    projectId: 'valleychildrenhospital',
+    storageBucket: 'valleychildrenhospital.appspot.com',
+    messagingSenderId: '592627206728',
+    appId: '1:592627206728:web:92a50c43a60cd02abde67d',
+    measurementId: 'G-5SZ4K0HP0P'
+  }
 };
 
 /*
